@@ -28,6 +28,49 @@ body{
     flex-shrink: 0;
 }
 
+.card--slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.card--slider > h2{
+    font-size: 400%;
+}
+
+.card--slider > input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-radius: 5rem;
+    height: 1.8rem;
+    background: linear-gradient(to right, #dc2424, #4a569d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card--slider > input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: red;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, #dc2424, #4a569d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    cursor: pointer;
+  }
+  
+.card--slider > input::-moz-range-thumb{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, #dc2424, #4a569d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    cursor: pointer;
+}
+
 .card--stopwatch{
     display: flex;
     justify-content: center;
