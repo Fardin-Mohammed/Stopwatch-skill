@@ -50,6 +50,7 @@ const rangeValue = document.getElementById("js--rangeValue");
 const slider = document.getElementById("js--slider");
 const body = document.getElementById("js--body");
 console.log(body);
+
 slider.value = 2;
 rangeValue.innerText = slider.value + "x";
 
@@ -57,3 +58,22 @@ slider.oninput = function(){
     rangeValue.innerText = slider.value + "x";
     body.style.fontSize = slider.value + "rem";
 }
+
+const paragraph = document.getElementById("js--text");
+// Data ophalen
+let data = fetch("../data.json  ").then(
+    function(binnenGekomenData)
+    {
+        return binnenGekomenData.json();
+    }).then(
+        function(echteData){
+            paragraph.innerHTML = echteData.text;
+            //code voor image veranderen
+        }
+    );
+
+const text = document.getElementById("js--text");
+text.innerText = data.text;
+
+const img = document.getElementById("js--img");
+img.setAttribute('src', 'img/image.webp');
